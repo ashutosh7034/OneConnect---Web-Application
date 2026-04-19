@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites - OneConnect</title>
+    <link rel="icon" type="image/svg+xml" href="assets/oneconnect-logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=20260419-6">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand brand-logo">
+            <img src="assets/oneconnect-logo.svg" alt="OneConnect" class="brand-logo-img brand-logo-img-nav">
+        </div>
+        
+        <form class="nav-search" id="searchForm">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search services...">
+        </form>
+        
+        <div class="nav-links">
+            <a href="dashboard.html" class="nav-link">
+                <i class="fa-solid fa-house"></i> <span>Home</span>
+            </a>
+            <a href="favourites.html" class="nav-link active">
+                <i class="fa-solid fa-heart"></i> <span>Favourites</span>
+            </a>
+            <a href="ai-guide.html" class="nav-link">
+                <i class="fa-solid fa-robot"></i> <span>AI Guide</span>
+            </a>
+            <a href="profile.html" class="nav-link">
+                <i class="fa-solid fa-user"></i> <span>Profile</span>
+            </a>
+            <a href="#" class="nav-link" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h2>Your Favourites</h2>
+            <p>Quick access to your most used services.</p>
+        </div>
+
+        <div id="favouritesGrid" class="card-grid">
+            <div class="empty-state" style="grid-column: 1 / -1;">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                <p>Loading your favourites...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js?v=20260419-6"></script>
+    <script src="js/favourites.js?v=20260419-6"></script>
+    <script>
+        if (!localStorage.getItem('userId')) {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('searchForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const q = document.getElementById('searchInput').value.trim();
+            if(q) {
+                window.location.href = `search.html?q=${encodeURIComponent(q)}`;
+            }
+        });
+    </script>
+</body>
+</html>

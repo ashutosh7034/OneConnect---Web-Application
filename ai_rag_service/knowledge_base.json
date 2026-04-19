@@ -1,0 +1,27 @@
+[
+  {"name":"Zomato","url":"https://www.zomato.com","description":"Order food online","emoji":"🍔","keywords":["food","hungry","eat","restaurant","delivery","lunch","dinner"]},
+  {"name":"Swiggy","url":"https://www.swiggy.com","description":"Food delivery","emoji":"🍲","keywords":["food","hungry","eat","delivery","snacks","dinner","lunch"]},
+  {"name":"Dominos","url":"https://www.dominos.co.in","description":"Pizza delivery","emoji":"🍕","keywords":["food","pizza","hungry","eat","delivery"]},
+
+  {"name":"Amazon","url":"https://www.amazon.in","description":"Online shopping","emoji":"🛒","keywords":["shopping","buy","products","electronics","order"]},
+  {"name":"Flipkart","url":"https://www.flipkart.com","description":"Electronics and more","emoji":"🛍️","keywords":["shopping","buy","electronics","fashion"]},
+  {"name":"Myntra","url":"https://www.myntra.com","description":"Fashion and clothing","emoji":"👗","keywords":["shopping","fashion","clothes","style","outfit"]},
+  {"name":"Meesho","url":"https://www.meesho.com","description":"Resell and shop","emoji":"📦","keywords":["shopping","resell","store","products","budget"]},
+
+  {"name":"YouTube","url":"https://www.youtube.com","description":"Watch videos","emoji":"📺","keywords":["videos","learn","music","entertainment","tutorial"]},
+  {"name":"Netflix","url":"https://www.netflix.com","description":"Movies and TV shows","emoji":"🎬","keywords":["movies","series","shows","entertainment","watch"]},
+  {"name":"Spotify","url":"https://open.spotify.com","description":"Music streaming","emoji":"🎵","keywords":["music","songs","podcast","audio","playlist"]},
+
+  {"name":"Google Maps","url":"https://maps.google.com","description":"Navigation and transit","emoji":"🗺️","keywords":["maps","navigation","route","location","travel"]},
+  {"name":"Uber","url":"https://www.uber.com/in/en","description":"Book rides and cabs","emoji":"🚕","keywords":["cab","ride","travel","taxi","commute"]},
+  {"name":"Ola","url":"https://www.olacabs.com","description":"Cab booking","emoji":"🚖","keywords":["cab","ride","travel","taxi","commute"]},
+  {"name":"IRCTC","url":"https://www.irctc.co.in","description":"Train ticket booking","emoji":"🚆","keywords":["train","ticket","travel","booking","journey"]},
+
+  {"name":"Paytm","url":"https://paytm.com","description":"Payments and recharges","emoji":"💳","keywords":["payment","bill","recharge","wallet","money"]},
+  {"name":"PhonePe","url":"https://www.phonepe.com","description":"UPI and payments","emoji":"📱","keywords":["upi","payment","money","transfer","recharge"]},
+
+  {"name":"Practo","url":"https://www.practo.com","description":"Doctor appointments","emoji":"🩺","keywords":["doctor","health","appointment","clinic","medical"]},
+  {"name":"PharmEasy","url":"https://pharmeasy.in","description":"Online medicine delivery","emoji":"💊","keywords":["medicine","health","pharmacy","medical","delivery"]},
+
+  {"name":"Gmail","url":"https://mail.google.com","description":"Email and communication","emoji":"✉️","keywords":["email","mail","communication","work","messages"]}
+]

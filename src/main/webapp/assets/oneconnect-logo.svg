@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="258" height="48" viewBox="0 0 258 48" fill="none" role="img" aria-label="OneConnect logo">
+  <g stroke="#1F4E97" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17.5 13.2c2.9-2.9 7.6-2.9 10.5 0l2.2 2.2c2.9 2.9 2.9 7.6 0 10.5l-4.2 4.2c-2.9 2.9-7.6 2.9-10.5 0"/>
+    <path d="M30.6 18l4.2-4.2c2.9-2.9 7.6-2.9 10.5 0l2.2 2.2c2.9 2.9 2.9 7.6 0 10.5l-4.2 4.2c-2.9 2.9-7.6 2.9-10.5 0"/>
+  </g>
+  <text x="58" y="32" fill="#1F4E97" font-size="34" font-weight="700" font-family="Sora, Manrope, Segoe UI, Arial, sans-serif" letter-spacing="-0.5">OneConnect</text>
+</svg>

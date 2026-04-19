@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - OneConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/oneconnect-logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=20260419-6">
+</head>
+<body class="page-register">
+    <div class="auth-container">
+        <div class="auth-shell auth-shell-register">
+            <aside class="auth-visual">
+                <div class="auth-badge"><i class="fa-solid fa-user-plus"></i> Join OneConnect</div>
+                <h2>Build your own super app experience</h2>
+                <p>Create your account and get instant access to curated apps, favorites, and AI-powered suggestions.</p>
+                <div class="auth-feature-list">
+                    <div class="auth-feature"><i class="fa-solid fa-layer-group"></i> Unified app dashboard</div>
+                    <div class="auth-feature"><i class="fa-solid fa-rocket"></i> Faster daily workflows</div>
+                    <div class="auth-feature"><i class="fa-solid fa-shield-halved"></i> Simple and secure sign in</div>
+                </div>
+                <div class="auth-orbit auth-orbit-register">
+                    <span></span><span></span><span></span>
+                </div>
+            </aside>
+
+            <div class="auth-card">
+                <h1 class="brand-logo"><img src="assets/oneconnect-logo.svg" alt="OneConnect" class="brand-logo-img"></h1>
+                <p>Create your account</p>
+
+                <div class="auth-trust-row">
+                    <span><i class="fa-solid fa-user-shield"></i> Private by Design</span>
+                    <span><i class="fa-solid fa-layer-group"></i> All Apps Together</span>
+                    <span><i class="fa-solid fa-rocket"></i> Ready in Minutes</span>
+                </div>
+
+                <div id="registerAlert" class="alert"></div>
+
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required placeholder="johndoe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Create a password">
+                    </div>
+
+                    <button type="submit" class="btn" id="registerBtn">Register</button>
+                </form>
+
+                <div class="auth-links">
+                    Already have an account? <a href="index.html">Login here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js?v=20260419-7"></script>
+    <script src="js/ui-3d.js?v=20260419-1"></script>
+    <script>
+        // Redirect to dashboard if already logged in
+        if (localStorage.getItem('userId')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>

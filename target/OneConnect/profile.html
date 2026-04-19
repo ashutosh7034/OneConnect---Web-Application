@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - OneConnect</title>
+    <link rel="icon" type="image/svg+xml" href="assets/oneconnect-logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=20260419-6">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand brand-logo">
+            <img src="assets/oneconnect-logo.svg" alt="OneConnect" class="brand-logo-img brand-logo-img-nav">
+        </div>
+        
+        <form class="nav-search" id="searchForm">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search services...">
+        </form>
+        
+        <div class="nav-links">
+            <a href="dashboard.html" class="nav-link">
+                <i class="fa-solid fa-house"></i> <span>Home</span>
+            </a>
+            <a href="favourites.html" class="nav-link">
+                <i class="fa-solid fa-heart"></i> <span>Favourites</span>
+            </a>
+            <a href="ai-guide.html" class="nav-link">
+                <i class="fa-solid fa-robot"></i> <span>AI Guide</span>
+            </a>
+            <a href="profile.html" class="nav-link active">
+                <i class="fa-solid fa-user"></i> <span>Profile</span>
+            </a>
+            <a href="#" class="nav-link" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="profile-container">
+            <!-- Sidebar -->
+            <div class="profile-sidebar">
+                <div class="profile-avatar" id="avatarInitials">U</div>
+                <div class="profile-name" id="displayName">Loading...</div>
+                <div class="profile-email" id="displayEmail">loading@example.com</div>
+                <div class="profile-username" id="displayUsername">@username</div>
+            </div>
+
+            <!-- Forms -->
+            <div class="profile-forms">
+                <div class="profile-form-card">
+                    <h2>Edit Profile</h2>
+                    <div id="profileAlert" class="alert"></div>
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <button type="submit" class="btn" id="updateProfileBtn">Save Changes</button>
+                    </form>
+                </div>
+
+                <div class="profile-form-card">
+                    <h2>Change Password</h2>
+                    <div id="passwordAlert" class="alert"></div>
+                    <form id="passwordForm">
+                        <div class="form-group">
+                            <label for="oldPassword">Current Password</label>
+                            <input type="password" id="oldPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm New Password</label>
+                            <input type="password" id="confirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn" id="changePasswordBtn">Update Password</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js?v=20260419-6"></script>
+    <script src="js/profile.js?v=20260419-2"></script>
+    <script>
+        if (!localStorage.getItem('userId')) {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('searchForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const q = document.getElementById('searchInput').value.trim();
+            if(q) {
+                window.location.href = `search.html?q=${encodeURIComponent(q)}`;
+            }
+        });
+    </script>
+</body>
+</html>

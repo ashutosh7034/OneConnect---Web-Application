@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - OneConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/oneconnect-logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=20260419-6">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand brand-logo">
+            <img src="assets/oneconnect-logo.svg" alt="OneConnect" class="brand-logo-img brand-logo-img-nav">
+        </div>
+        
+        <form class="nav-search" id="searchForm">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search services...">
+        </form>
+        
+        <div class="nav-links">
+            <a href="dashboard.html" class="nav-link active">
+                <i class="fa-solid fa-house"></i> <span>Home</span>
+            </a>
+            <a href="favourites.html" class="nav-link">
+                <i class="fa-solid fa-heart"></i> <span>Favourites</span>
+            </a>
+            <a href="ai-guide.html" class="nav-link">
+                <i class="fa-solid fa-robot"></i> <span>AI Guide</span>
+            </a>
+            <a href="profile.html" class="nav-link">
+                <i class="fa-solid fa-user"></i> <span>Profile</span>
+            </a>
+            <a href="#" class="nav-link" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="dashboard-hero">
+            <div class="hero-content">
+                <p class="hero-kicker">Personalized Workspace</p>
+                <h2>Welcome back, <span id="welcomeName">User</span>!</h2>
+                <p>Explore all services in one place and launch tools instantly from your dashboard.</p>
+                <div class="hero-chips">
+                    <span class="hero-chip"><i class="fa-solid fa-fire"></i> Trending Apps</span>
+                    <span class="hero-chip"><i class="fa-solid fa-heart"></i> Quick Favourites</span>
+                    <span class="hero-chip"><i class="fa-solid fa-robot"></i> AI Guided Picks</span>
+                </div>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric-card">
+                    <span>Total Sections</span>
+                    <strong>6+</strong>
+                </div>
+                <div class="metric-card">
+                    <span>Popular Use</span>
+                    <strong>Daily</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-header">
+            <h3>All Services</h3>
+            <p>Tap open to launch in your external app tab.</p>
+        </div>
+
+        <div id="servicesGrid" class="card-grid">
+            <!-- Services will be populated here via JS -->
+            <div class="empty-state" style="grid-column: 1 / -1;">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                <p>Loading services...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js?v=20260419-6"></script> <!-- For logout function -->
+    <script src="js/dashboard.js?v=20260419-6"></script>
+    <script src="js/ui-3d.js?v=20260419-1"></script>
+    <script>
+        // Check authentication
+        if (!localStorage.getItem('userId')) {
+            window.location.href = 'index.html';
+        }
+        document.getElementById('welcomeName').textContent = localStorage.getItem('username') || 'User';
+
+        // Setup global search
+        document.getElementById('searchForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const q = document.getElementById('searchInput').value.trim();
+            if(q) {
+                window.location.href = `search.html?q=${encodeURIComponent(q)}`;
+            }
+        });
+    </script>
+</body>
+</html>

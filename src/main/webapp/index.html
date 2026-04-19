@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - OneConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/oneconnect-logo.svg">
+    <!-- Use FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=20260419-6">
+</head>
+<body class="page-login">
+    <div class="auth-container">
+        <div class="auth-shell auth-shell-login">
+            <aside class="auth-visual">
+                <div class="auth-badge"><i class="fa-solid fa-bolt"></i> One Smart Hub</div>
+                <h2>Command your daily apps from one sharp control deck</h2>
+                <p>OneConnect brings the tools you use every day into a single place with smarter discovery and faster launch flow.</p>
+                <div class="auth-feature-list">
+                    <div class="auth-feature"><i class="fa-solid fa-wand-magic-sparkles"></i> Smart recommendations</div>
+                    <div class="auth-feature"><i class="fa-solid fa-compass"></i> Fast discovery</div>
+                    <div class="auth-feature"><i class="fa-solid fa-heart"></i> Favourites synced</div>
+                </div>
+                <div class="auth-orbit auth-orbit-login">
+                    <span></span><span></span><span></span>
+                </div>
+            </aside>
+
+            <div class="auth-card">
+                <h1 class="brand-logo"><img src="assets/oneconnect-logo.svg" alt="OneConnect" class="brand-logo-img"></h1>
+                <p>Welcome back. Sign in to continue.</p>
+
+                <div class="auth-trust-row">
+                    <span><i class="fa-solid fa-shield"></i> Secure Login</span>
+                    <span><i class="fa-solid fa-gauge-high"></i> Fast Access</span>
+                    <span><i class="fa-solid fa-sparkles"></i> Smart Apps</span>
+                </div>
+
+                <div id="loginAlert" class="alert alert-error"></div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+
+                    <button type="submit" class="btn" id="loginBtn">Login</button>
+                </form>
+
+                <div class="auth-links">
+                    Don't have an account? <a href="register.html">Register here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js?v=20260419-7"></script>
+    <script src="js/ui-3d.js?v=20260419-1"></script>
+    <script>
+        // Redirect to dashboard if already logged in
+        if (localStorage.getItem('userId')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
