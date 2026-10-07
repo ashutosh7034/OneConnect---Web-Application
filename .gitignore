@@ -1,0 +1,15 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Maven build output
+target/
+!target/OneConnect.war
+
+# Local Maven distribution
+apache-maven-*/
+
+# Local IDE and environment files
+.idea/
+*.iml
+local.properties
